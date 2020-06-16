@@ -11,10 +11,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let navBarAppearance = UINavigationBar.appearance()
+        navBarAppearance.tintColor = .white
+        navBarAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white ]
         return true
     }
 
