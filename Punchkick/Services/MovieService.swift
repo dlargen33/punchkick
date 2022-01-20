@@ -51,9 +51,7 @@ class MovieService {
                     let decoder = JSONDecoder()
                     let fetchResult = try decoder.decode(MovieFetchResult.self, from: data)
                     
-                    guard let success =  Bool(fetchResult.success.lowercased()),
-                        success == true,
-                            let movies = fetchResult.movies   else {
+                    guard let success = Bool(fetchResult.success.lowercased()), success == true, let movies = fetchResult.movies  else {
                                     
                         guard let message = fetchResult.error else  {
                             DispatchQueue.main.async {
