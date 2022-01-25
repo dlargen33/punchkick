@@ -38,6 +38,7 @@ class MovieService {
     private let cache = NSCache<NSString, AnyObject>()
     
     func search(for criteria: String, completion: @escaping (Result<[Movie], Error>) -> Void) {
+        print("Called Search with criteria: \(criteria)")
         var params = ["apikey" : apiKey]
         params ["type"] = resultType
         params["s"] = criteria

@@ -45,6 +45,7 @@ class MovieSearchViewModel {
             switch result {
             case .success(let movies) :
                 self.movies = movies
+                print("Search Complete")
                 completion(.success(()))
             case .failure(let error):
                 completion(.failure(error))

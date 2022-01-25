@@ -9,6 +9,11 @@
 import Foundation
 
 class Endpoint {
+    
+    deinit {
+        print("Endpoint deinit")
+    }
+    
     enum EndpointError : LocalizedError {
         case invalidRoute(String)
         case serverError
